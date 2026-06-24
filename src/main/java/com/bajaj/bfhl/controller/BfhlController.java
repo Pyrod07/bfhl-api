@@ -22,4 +22,8 @@ public class BfhlController {
         BfhlResponse response = bfhlService.processData(request);
         return ResponseEntity.ok(response);
     }
+    @GetMapping("/bfhl")
+    public ResponseEntity<String> healthCheck() {
+        return ResponseEntity.ok("BFHL API Running");
+    }
 }
